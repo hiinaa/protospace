@@ -46,6 +46,21 @@
 - title :string
 - cach_copy :string
 - concept :text
-- user_id :string
+- user_id :integer
 ```
 
+## Comments
+
+### Associations
+```
+- belongs_to :user
+- belongs_to :prototype
+```
+
+### Column
+```
+- id :integer
+- text :text
+- prototype_id :integer
+- user_id :integer
+```
