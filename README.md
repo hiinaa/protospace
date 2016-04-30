@@ -64,3 +64,17 @@
 - prototype_id :integer
 - user_id :integer
 ```
+
+## Images
+
+### Associations
+```
+- belongs_to :prototype
+```
+
+### Column
+```
+- id :integer
+- image :string(carrierwave)
+- prototype_id :integer
+```
