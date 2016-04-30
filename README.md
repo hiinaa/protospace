@@ -78,3 +78,17 @@
 - image :string(carrierwave)
 - prototype_id :integer
 ```
+
+## Likes
+
+### Associations
+```
+- belongs_to :prototype
+```
+
+### Column
+```
+- id :integer
+- user_id :integer
+- prototype_id :integer
+```
