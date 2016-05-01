@@ -43,7 +43,7 @@
 ### Column
 ```
 - id :integer
-- title :string
+- image_title :string
 - cach_copy :string
 - concept :text
 - user_id :integer
