@@ -75,7 +75,7 @@
 ### Column
 ```
 - id :integer
-- image :string(carrierwave)
+- status :string(carrierwave)
 - prototype_id :integer
 ```
 
