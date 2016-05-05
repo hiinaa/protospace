@@ -38,7 +38,6 @@
 - has_many :comments
 - has_many :likes
 - has_many :images
-- has_many :tags, :through => :prototype_tags
 ```
 
 ### Column
@@ -97,30 +96,8 @@
 
 ## tags
 
-### Associations
-```
-- has_many :prototype_tags
-- has_many :prototypes, :through => :prototype_tags
-```
-
 ### Column
 ```
 - id :integer
 - name :string
 ```
-
-## prototype_tags
-
-### Associations
-```
-- belongs_to :prototype
-- belongs_to :tag
-```
-
-### Column
-```
-- id :integer
-- prototype_id :string
-- tag_id :string
-```
-
