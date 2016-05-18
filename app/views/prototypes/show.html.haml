@@ -3,31 +3,31 @@
     .col-md-6
       .media
         .media-left
-          %link_to{ href: '#' }
+          = link_to '', '#'
             %img.media-object{ alt: '64x64', data: { holder:{ rendered: true }, src: 'holder.js/64x64' }, src: '~~', style: 'width: 64px; height: 64px;'}/
         .media-body
           %h4#top-aligned-media.media-heading
             Top aligned media
           .proto-user
-            %link_to{ href: "" } by User
+            = link_to 'by User', '#'
             %span.degree we-b inc. Designer
 
     .col-md-6.text-right
       %button.btn.btn-default
-        = image_tag("icon_heart.svg")
+        = image_tag "icon_heart.svg"
         Like
         %span.num 20
   .row
     .col-md-9
-      = image_tag("sample.png", class: 'img-responsive')
+      = image_tag "sample.png", class: 'img-responsive'
     .col-md-3
       %ul.proto-sub-list.list-group
         %li.list-group-item
-          = image_tag("sample.png", class: 'img-responsive')
+          = image_tag "sample.png", class: 'img-responsive'
         %li.list-group-item
-          = image_tag("sample.png", class: 'img-responsive')
+          = image_tag "sample.png", class: 'img-responsive'
         %li.list-group-item
-          = image_tag("sample.png", class: 'img-responsive')
+          = image_tag "sample.png", class: 'img-responsive'
   .row.proto-description
     .col-md-3
       %h4 Catch Copy
@@ -39,9 +39,9 @@
       %h4 Tag List
       %ul.proto-tag-list.list-inline
         %li
-          %link_to{ href: '#', class: 'btn btn-default' } iPad
+          = link_to 'iPad', '#', class: 'btn btn-default'
         %li
-          %link_to{ href: '#', class: 'btn btn-default' } wireframe
+          = link_to 'wireframe', '#', class: 'btn btn-default'
   .row.proto-comments
     %h4.col-md-12
       Comments
@@ -49,34 +49,34 @@
     .col-md-8
       .media
         .media-left
-          %link_to{ href: '#' }
+          = link_to '', '#'
             %img.media-object{ alt: '64x64', data: { holder:{ rendered: true }, src: 'holder.js/64x64' }, src: '~~', style: 'width: 64px; height: 64px;'}/
         .media-body
           %h4#top-aligned-media.media-heading
             Top aligned media
-            %a.anchorjs-link{ href: '#top-aligned-media' }
+            = link_to '', '#top-aligned-media', class: 'anchorjs-link'
               %span.anchorjs-icon
           %p Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
           %p Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       .media
         .media-left.media-middle
-          %link_to{ href: '#' }
+          = link_to '', '#'
             %img.media-object{ alt: '64x64', data: { holder:{ rendered: true }, src: 'holder.js/64x64' }, src: '~~', style: 'width: 64px; height: 64px;'}/
         .media-body
           %h4#middle-aligned-media.media-heading
             Middle aligned media
-            %a.anchorjs-link{ href: '#middle-aligned-media' }
+            = link_to '', '#middle-aligned-media', class: 'anchorjs-link'
               %span.anchorjs-icon
           %p Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
           %p Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       .media
         .media-left.media-bottom
-          %link_to{ href: '#' }
+          = link_to '', '#'
             %img.media-object{ alt: '64x64', data: { holder:{ rendered: true }, src: 'holder.js/64x64' }, src: '~~', style: 'width: 64px; height: 64px;'}/
         .media-body
           %h4#bottom-aligned-media.media-heading
             Bottom aligned media
-            %a.anchorjs-link{ href: '#bottom-aligned-media' }
+            = link_to '', '#bottom-aligned-media', class: 'anchorjs-link'
               %span.anchorjs-icon
           %p Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
           %p Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
