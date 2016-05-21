@@ -1,11 +1,11 @@
 .navbar.navbar-default.navbar-static-top.navbar-fixed-top
   .container
-    %button.navbar-toggle{ type: 'button', data: { toggle: 'collapse', target: '.navbar-responsive-collapse' }}
+    %button.navbar-toggle{ type: 'button', data: { toggle: 'collapse', target: '.navbar-responsive-collapse', class: "container" }}
       %span.icon-bar
       %span.icon-bar
       %span.icon-bar
     %a.navbar-brand(href="/")
-      = image_tag("logo.png", alt: "PROTO TYPE - SHARE THE PROTOTYPE", height: "36px")
+      = image_tag("logo.png", alt: "PROTO TYPE - SHARE THE PROTOTYPE", height: "36px", class: "navbar-brand")
     .navbar-collapse.collapse.navbar-responsive-collapse
       //not login
       %ul.nav.navbar-nav.navbar-right
@@ -16,7 +16,7 @@
       //login
       %ul.nav.navbar-nav.navbar-right
         %li.dropdown
-          %a.dropdown-toggle{ area: { expanded: false }, data: { toggle: 'dropdown' }, href: '#', role: 'button' }
+          %a.dropdown-toggle{ area: { expanded: false }, data: { toggle: 'dropdown' }, href: '#', role: 'button', class: 'dropdown' }
             UserName
             %span.caret
           %ul.dropdown-menu{ role: 'menu' }
