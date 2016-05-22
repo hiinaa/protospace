@@ -7,7 +7,6 @@
           .user-name.col-md-10
             %input{type: "text", placeholder: "Username"}/
           .user-image.col-md-2
-            / %button.btn.btn-primary Add image
             = button_tag 'Add image', class: 'btn btn-primary'
             %input{type: "file"}/
         %input.user-email{type: "email", placeholder: "E-Mail"}/
@@ -26,4 +25,4 @@
           .user-name.col-md-12
             %textarea{name: "textarea", cols: "30", rows: "4", placeholder: "Works"}
     .row.text-center.user-btn
-      %button.btn.btn-lg.btn-primary.btn-block{type: "submit"} Save
+      = button_tag 'Save', class: 'btn btn-lg btn-primary btn-block', type: "submit"
