@@ -151,20 +151,19 @@
 .text-center
   %ul.pagination
     %li.disabled
-      = link_to 'Previous', '#'
-      %span{ aria: { hidden: 'true' }} «
+      %a{ area: { label: 'Previous' }, href: '#' }
+        %span{ aria: { hidden: 'true' }} «
     %li.active
-      %a{href: "#"}
-        1
-        %span.sr-only (current)
+      %a{ href: "#" } 1
     %li
-      %a{href: "#"} 2
+      %a{ href: "#" } 2
     %li
-      %a{href: "#"} 3
+      %a{ href: "#" } 3
     %li
-      %a{href: "#"} 4
+      %a{ href: "#" } 4
     %li
-      %a{href: "#"} 5
+      %a{ href: "#" } 5
     %li
-      %link_to{ area: { label: 'Next'}, href: '#' }
-      %span{ aria: { hidden: true } } «
+      %a{ area: { label: 'Next' }, href: '#' }
+        %span{ aria: { hidden: 'true' }} »
+Status API Training Shop Blog About
