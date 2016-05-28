@@ -7,12 +7,7 @@
     = link_to '/', class: 'navbar-brand' do
       = image_tag "logo.png", alt: "PROTO TYPE - SHARE THE PROTOTYPE", height: "36px", class: 'navbar-brand'
     .navbar-collapse.collapse.navbar-responsive-collapse
-      -unless user_signed_in?
-        %ul.nav.navbar-nav.navbar-right
-          %li
-            .btn.btn-primary.navbar-btn
-              = link_to 'Get Started', new_user_session_path
-      -else
+      -if user_signed_in?
         %ul.nav.navbar-nav.navbar-right
           %li.dropdown
             = link_to '#', aria: { expanded: false }, class: 'dropdown-toggle', data: { toggle: 'dropdown' }, role: 'button' do
@@ -28,3 +23,8 @@
           %li
             .btn.btn-primary.navbar-btn
               = link_to 'New Proto', '/prototypes/new'
+      -else
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            .btn.btn-primary.navbar-btn
+              = link_to 'Get Started', new_user_session_path
