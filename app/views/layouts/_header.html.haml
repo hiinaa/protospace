@@ -5,7 +5,7 @@
       %span.icon-bar
       %span.icon-bar
     = link_to '/', class: 'navbar-brand' do
-      = image_tag "logo.png", alt: "PROTO TYPE - SHARE THE PROTOTYPE", height: "36px", class: "navbar-brand"
+      = image_tag "logo.png", alt: "PROTO TYPE - SHARE THE PROTOTYPE", height: "36px", class: 'navbar-brand'
     .navbar-collapse.collapse.navbar-responsive-collapse
       -unless user_signed_in?
         %ul.nav.navbar-nav.navbar-right
@@ -15,7 +15,7 @@
       -else
         %ul.nav.navbar-nav.navbar-right
           %li.dropdown
-            = link_to '', '#', area: { expanded: false }, data: { toggle: 'dropdown' }, role: 'button', class: 'dropdown-toggle' do
+            = link_to '#', aria: { expanded: false }, class: 'dropdown-toggle', data: { toggle: 'dropdown' }, role: 'button' do
               = current_user.nickname
               %span.caret
             %ul.dropdown-menu{ role: 'menu' }
@@ -24,7 +24,7 @@
               %li
                 = link_to 'Profile Edit', edit_user_password_path(current_user)
               %li
-                = link_to'Logout', destroy_user_session_path, method: :delete
+                = link_to 'Logout', destroy_user_session_path, method: :delete
           %li
             .btn.btn-primary.navbar-btn
               = link_to 'New Proto', '/prototypes/new'
