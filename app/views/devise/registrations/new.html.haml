@@ -23,6 +23,6 @@
         %h4 Works
         .user-name_image.row
           .user-name.col-md-12
-            =f.text_field :works, cols: '30', rows: '4', placeholder: 'Works'
+            %textarea{ name: 'textarea', cols: '30', rows: '4', placeholder: 'Works' }
     .row.text-center.user-btn
       = f.submit 'Save', class: 'btn btn-lg btn-primary btn-block'
