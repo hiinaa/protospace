@@ -1,11 +1,11 @@
 .navbar.navbar-default.navbar-static-top.navbar-fixed-top
   .container
-    = button_tag type: 'button', data: { toggle: 'collapse', target: '.navbar-responsive-collapse', class: 'navbar-toggle' } do
+    = button_tag data: { toggle: 'collapse', target: '.navbar-responsive-collapse' }, class: 'navbar-toggle' do
       %span.icon-bar
       %span.icon-bar
       %span.icon-bar
     = link_to '/', class: 'navbar-brand' do
-      = image_tag "logo.png", alt: "PROTO TYPE - SHARE THE PROTOTYPE", height: "36px", class: 'navbar-brand'
+      = image_tag 'logo.png', alt: 'PROTO TYPE - SHARE THE PROTOTYPE', height: '36px', class: 'navbar-brand'
     .navbar-collapse.collapse.navbar-responsive-collapse
       -if user_signed_in?
         %ul.nav.navbar-nav.navbar-right
