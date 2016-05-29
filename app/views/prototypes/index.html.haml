@@ -1,6 +1,6 @@
 .jumbotron
   .container.text-center
-    = image_tag("header_logo.png", alt: "PROTO TYPE - SHARE THE PROTOTYPE", height: "73px")
+    = image_tag 'header_logo.png', alt: 'PROTO TYPE - SHARE THE PROTOTYPE', height: '73px'
 
 .filter-nav
   .container
@@ -10,14 +10,14 @@
           = link_to 'Popular PROTO', '#'
         %li{ role: 'presentation' }
           = link_to 'Newest PROTO', '#'
-      %button_tag{ type: 'button', class: 'btn btn-default col-lg-1' } View Tags
+      = button_tag 'View Tags', class: 'btn btn-default col-lg-1'
 
 .container.proto-list
   .row
     .col-sm-4.col-md-3.proto-content
       .thumbnail
         = link_to '/prototypes/show' do
-          = image_tag "sample.png"
+          = image_tag 'sample.png'
           .caption
             %h3 Salvation Army on iPad App Wireframe
             .proto-meta
@@ -33,7 +33,7 @@
     .col-sm-4.col-md-3.proto-content
       .thumbnail
         = link_to '/prototypes/show' do
-          = image_tag "sample.png"
+          = image_tag 'sample.png'
           .caption
             %h3 Salvation Army on iPad App Wireframe
             .proto-meta
@@ -50,7 +50,7 @@
     .col-sm-4.col-md-3.proto-content
       .thumbnail
         = link_to '/prototypes/show' do
-          = image_tag "sample.png"
+          = image_tag 'sample.png'
           .caption
             %h3 Salvation Army on iPad App Wireframe
             .proto-meta
@@ -66,24 +66,7 @@
     .col-sm-4.col-md-3.proto-content
       .thumbnail
         = link_to '/prototypes/show' do
-          = image_tag "sample.png"
-          .caption
-            %h3 Salvation Army on iPad App Wireframe
-            .proto-meta
-              .proto-user
-                = link_to 'by user', '#'
-              .proto-posted
-                Apr 26
-            %ul.proto-tag-list.list-inline
-              %li
-                = link_to 'iPad', '#', class: 'btn btn-default'
-              %li
-                = link_to 'wireframe', '#', class: 'btn btn-default'
-
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        = link_to '/prototypes/show' do
-          = image_tag "sample.png"
+          = image_tag 'sample.png'
           .caption
             %h3 Salvation Army on iPad App Wireframe
             .proto-meta
@@ -100,7 +83,7 @@
     .col-sm-4.col-md-3.proto-content
       .thumbnail
         = link_to '/prototypes/show' do
-          = image_tag "sample.png"
+          = image_tag 'sample.png'
           .caption
             %h3 Salvation Army on iPad App Wireframe
             .proto-meta
@@ -117,7 +100,7 @@
     .col-sm-4.col-md-3.proto-content
       .thumbnail
         = link_to '/prototypes/show' do
-          = image_tag "sample.png"
+          = image_tag 'sample.png'
           .caption
             %h3 Salvation Army on iPad App Wireframe
             .proto-meta
@@ -134,7 +117,24 @@
     .col-sm-4.col-md-3.proto-content
       .thumbnail
         = link_to '/prototypes/show' do
-          = image_tag "sample.png"
+          = image_tag 'sample.png'
+          .caption
+            %h3 Salvation Army on iPad App Wireframe
+            .proto-meta
+              .proto-user
+                = link_to 'by user', '#'
+              .proto-posted
+                Apr 26
+            %ul.proto-tag-list.list-inline
+              %li
+                = link_to 'iPad', '#', class: 'btn btn-default'
+              %li
+                = link_to 'wireframe', '#', class: 'btn btn-default'
+
+    .col-sm-4.col-md-3.proto-content
+      .thumbnail
+        = link_to '/prototypes/show' do
+          = image_tag 'sample.png'
           .caption
             %h3 Salvation Army on iPad App Wireframe
             .proto-meta
@@ -154,15 +154,15 @@
       %a{ area: { label: 'Previous' }, href: '#' }
         %span{ aria: { hidden: 'true' }} «
     %li.active
-      %a{ href: "#" } 1
+      %a{ href: '#' } 1
     %li
-      %a{ href: "#" } 2
+      %a{ href: '#' } 2
     %li
-      %a{ href: "#" } 3
+      %a{ href: '#' } 3
     %li
-      %a{ href: "#" } 4
+      %a{ href: '#' } 4
     %li
-      %a{ href: "#" } 5
+      %a{ href: '#' } 5
     %li
       %a{ area: { label: 'Next' }, href: '#' }
         %span{ aria: { hidden: 'true' }} »
