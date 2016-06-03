@@ -8,10 +8,11 @@ class UsersController < ApplicationController
 
   def update
     current_user.update(update_params)
+    redirect_to root_path
   end
 
   private
   def update_params
-    params.riquire(:user).permit(:nickname, :avatar, :profile, :member, :works)
+    params.require(:user).permit(:nickname, :avatar, :profile, :member, :works)
   end
 end
