@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: [:edit, :update]
+  before_action :acquire_user_id, only: [:edit, :show]
+  before_action :authenticate_user!, only: :update
+
   def show
-    @user = User.find(params[:id])
   end
 
   def edit
@@ -15,5 +16,9 @@ class UsersController < ApplicationController
   private
   def update_params
     params.require(:user).permit(:nickname, :avatar, :profile, :member, :works)
+  end
+
+  def acquire_user_id
+    @user = User.find(params[:id])
   end
 end
