@@ -1,6 +1,6 @@
 class PrototypesController < ApplicationController
   def new
     @prototype = Prototype.new
-    @prototype.images.build
+    @prototype.prototype_images.build
   end
 end
