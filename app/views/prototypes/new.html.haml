@@ -1,43 +1,43 @@
 .container.proto-new
-= form_for @prototype do |f|
-  .col-md-8.col-md-offset-2
-    %header.row.user-nav.row
-      .col-md-12
-        = f.text_field :title, placeholder: 'Title', class: 'proto-new-title'
-    .row
-      .col-md-12
-        .cover-image-upload
-          = f.fields_for :images do |images_form|
-            = images_form.file_field :name, class: 'cover-image-upload'
-            = images_form.hidden_field :status, value: 'main'
-      .col-md-12
-        %ul.proto-sub-list.list-group
-          %li.list-group-item.col-md-4
-            .image-upload
-              = f.fields_for :images do |images_form|
-                = images_form.file_field :name, class: 'image-upload'
-                = images_form.hidden_field :status, value: 'sub'
-          %li.list-group-item.col-md-4
-            .image-upload
-              = f.fields_for :images do |images_form|
-                = images_form.file_field :name, class: 'image-upload'
-                = images_form.hidden_field :status, value: 'sub'
-          %li.list-group-item.col-md-4
-            .image-upload-plus
-              %span +
-    .row.proto-description
-      .col-md-12
-        = f.text_field :cach_copy, placeholder: 'Catch Copy'
-      .col-md-12
-        = f.text_field :concept, cols: '30', rows: '4', placeholder: 'Concept'
-      .col-md-12
-        %h4 Tag List
-        .row
-          .col-md-3
-            = f.text_field :web_design, placeholder: 'Web Design'
-          .col-md-3
-            = f.text_field :ui, placeholder: 'UI'
-          .col-md-3
-            = f.text_field :application, placeholder: 'Application'
-    .row.text-center.proto-btn
-      = f.submit 'Publish', class: 'btn btn-lg btn-primary btn-block'
+  = form_for @prototype do |f|
+    .col-md-8.col-md-offset-2
+      %header.row.user-nav.row
+        .col-md-12
+          = f.text_field :title, placeholder: 'Title', class: 'proto-new-title'
+      .row
+        .col-md-12
+          .cover-image-upload
+            = f.fields_for :images do |images_form|
+              = images_form.file_field :name, class: 'cover-image-upload'
+              = images_form.hidden_field :status, value: 'main'
+        .col-md-12
+          %ul.proto-sub-list.list-group
+            %li.list-group-item.col-md-4
+              .image-upload
+                = f.fields_for :images do |images_form|
+                  = images_form.file_field :name, class: 'image-upload'
+                  = images_form.hidden_field :status, value: 'sub'
+            %li.list-group-item.col-md-4
+              .image-upload
+                = f.fields_for :images do |images_form|
+                  = images_form.file_field :name, class: 'image-upload'
+                  = images_form.hidden_field :status, value: 'sub'
+            %li.list-group-item.col-md-4
+              .image-upload-plus
+                %span +
+      .row.proto-description
+        .col-md-12
+          = f.text_field :cach_copy, placeholder: 'Catch Copy'
+        .col-md-12
+          = f.text_field :concept, cols: '30', rows: '4', placeholder: 'Concept'
+        .col-md-12
+          %h4 Tag List
+          .row
+            .col-md-3
+              %input{type: "text", placeholder: "Web Design"}/
+            .col-md-3
+              %input{type: "text", placeholder: "UI"}/
+            .col-md-3
+              %input{type: "text", placeholder: "Application"}/
+      .row.text-center.proto-btn
+        = f.submit 'Publish', class: 'btn btn-lg btn-primary btn-block'
