@@ -3,4 +3,17 @@ class PrototypesController < ApplicationController
     @prototype = Prototype.new
     @prototype.prototype_images.build
   end
+
+  def create
+    @prototype = Prototype.new(prototype_params)
+    if @prototype.save
+      redirect: root_path
+    else
+      render :new
+  end
+
+  private
+  def prototype_params
+    params.require(:prototype).permit(:title, :cach_copy, :concept, :user_id, prototype_images_attributes: [:status, :name])
+  end
 end
