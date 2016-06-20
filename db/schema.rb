@@ -11,14 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160620071632) do
+ActiveRecord::Schema.define(version: 20160620135750) do
 
   create_table "prototype_images", force: :cascade do |t|
     t.integer  "status",       limit: 1,   default: 0, null: false
     t.integer  "prototype_id", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "name",         limit: 4
     t.string   "image",        limit: 255
   end
 
