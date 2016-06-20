@@ -51,3 +51,4 @@ end
   gem 'carrierwave'
   gem 'rmagick'
   gem 'devise'
+  gem 'pry-rails'
