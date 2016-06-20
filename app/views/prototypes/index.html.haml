@@ -14,139 +14,23 @@
 
 .container.proto-list
   .row
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        = link_to '/prototypes/show' do
-          = image_tag 'sample.png'
-          .caption
-            %h3 Salvation Army on iPad App Wireframe
-            .proto-meta
-              .proto-user
-                = link_to 'by user', '#'
-              .proto-posted
-                Apr 26
-            %ul.proto-tag-list.list-inline
-              %li
-                = link_to 'iPad', '#'
-              %li
-                = link_to 'wireframe', '#'
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        = link_to '/prototypes/show' do
-          = image_tag 'sample.png'
-          .caption
-            %h3 Salvation Army on iPad App Wireframe
-            .proto-meta
-              .proto-user
-                = link_to 'by user', '#'
-              .proto-posted
-                Apr 26
-            %ul.proto-tag-list.list-inline
-              %li
-                = link_to 'iPad', '#', class: 'btn btn-default'
-              %li
-                = link_to 'wireframe', '#', class: 'btn btn-default'
-
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        = link_to '/prototypes/show' do
-          = image_tag 'sample.png'
-          .caption
-            %h3 Salvation Army on iPad App Wireframe
-            .proto-meta
-              .proto-user
-                = link_to 'by user', '#'
-              .proto-posted
-                Apr 26
-            %ul.proto-tag-list.list-inline
-              %li
-                = link_to 'iPad', '#', class: 'btn btn-default'
-              %li
-                = link_to 'wireframe', '#', class: 'btn btn-default'
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        = link_to '/prototypes/show' do
-          = image_tag 'sample.png'
-          .caption
-            %h3 Salvation Army on iPad App Wireframe
-            .proto-meta
-              .proto-user
-                = link_to 'by user', '#'
-              .proto-posted
-                Apr 26
-            %ul.proto-tag-list.list-inline
-              %li
-                = link_to 'iPad', '#', class: 'btn btn-default'
-              %li
-                = link_to 'wireframe', '#', class: 'btn btn-default'
-
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        = link_to '/prototypes/show' do
-          = image_tag 'sample.png'
-          .caption
-            %h3 Salvation Army on iPad App Wireframe
-            .proto-meta
-              .proto-user
-                = link_to 'by user', '#'
-              .proto-posted
-                Apr 26
-            %ul.proto-tag-list.list-inline
-              %li
-                = link_to 'iPad', '#', class: 'btn btn-default'
-              %li
-                = link_to 'wireframe', '#', class: 'btn btn-default'
-
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        = link_to '/prototypes/show' do
-          = image_tag 'sample.png'
-          .caption
-            %h3 Salvation Army on iPad App Wireframe
-            .proto-meta
-              .proto-user
-                = link_to 'by user', '#'
-              .proto-posted
-                Apr 26
-            %ul.proto-tag-list.list-inline
-              %li
-                = link_to 'iPad', '#', class: 'btn btn-default'
-              %li
-                = link_to 'wireframe', '#', class: 'btn btn-default'
-
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        = link_to '/prototypes/show' do
-          = image_tag 'sample.png'
-          .caption
-            %h3 Salvation Army on iPad App Wireframe
-            .proto-meta
-              .proto-user
-                = link_to 'by user', '#'
-              .proto-posted
-                Apr 26
-            %ul.proto-tag-list.list-inline
-              %li
-                = link_to 'iPad', '#', class: 'btn btn-default'
-              %li
-                = link_to 'wireframe', '#', class: 'btn btn-default'
-
-    .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        = link_to '/prototypes/show' do
-          = image_tag 'sample.png'
-          .caption
-            %h3 Salvation Army on iPad App Wireframe
-            .proto-meta
-              .proto-user
-                = link_to 'by user' '#'
-              .proto-posted
-                Apr 26
-            %ul.proto-tag-list.list-inline
-              %li
-                = link_to 'iPad', '#', class: 'btn btn-default'
-              %li
-                = link_to 'wireframe', '#', class: 'btn btn-default'
+    - @prototypes.each do |prototype|
+      .col-sm-4.col-md-3.proto-content
+        .thumbnail
+          = link_to '#' do
+            = image_tag 'sample.png'
+            .caption
+              %h3= prototype.title
+              .proto-meta
+                .proto-user
+                  = link_to "#{prototype.user.nickname}", '#'
+                .proto-posted
+                  Apr 26
+              %ul.proto-tag-list.list-inline
+                %li
+                  = link_to 'iPad', '#'
+                %li
+                  = link_to 'wireframe', '#'
 
 .text-center
   %ul.pagination
