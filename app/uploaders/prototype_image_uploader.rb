@@ -48,4 +48,13 @@ class PrototypeImageUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
+  def default_url
+    # "/images/fallback/" + [version_name, "default.png"].compact.join('_')
+    '/uploads/noimage.png'
+  end
+
+  def extension_white_list
+    %w(jpg jpeg gif png)
+  end
+
 end
