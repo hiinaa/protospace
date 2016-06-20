@@ -49,4 +49,5 @@ end
   gem 'erb2haml'
   gem 'bootstrap-sass'
   gem 'carrierwave'
+  gem 'rmagick'
   gem 'devise'
