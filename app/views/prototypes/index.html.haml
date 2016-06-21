@@ -14,23 +14,7 @@
 
 .container.proto-list
   .row
-    - @prototypes.each do |prototype|
-      .col-sm-4.col-md-3.proto-content
-        .thumbnail
-          = link_to prototype_path(prototype.id) do
-            = image_tag prototype.prototype_images.main.first.image
-            .caption
-              %h3= prototype.title
-              .proto-meta
-                .proto-user
-                  = link_to "#{prototype.user.nickname}", '#'
-                .proto-posted
-                  Apr 26
-              %ul.proto-tag-list.list-inline
-                %li
-                  = link_to 'iPad', '#'
-                %li
-                  = link_to 'wireframe', '#'
+    = render partial: "prototype", collection: @prototypes
 
 .text-center
   %ul.pagination
