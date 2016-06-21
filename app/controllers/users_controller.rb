@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, only: :update
 
   def show
+    @prototypes = @user.prototypes.order('created_at DESC')
   end
 
   def edit
