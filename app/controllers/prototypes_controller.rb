@@ -3,6 +3,10 @@ class PrototypesController < ApplicationController
     @prototypes = Prototype.order("created_at DESC")
   end
 
+  def show
+    @prototype = Prototype.find(params[:id])
+  end
+
   def new
     @prototype = Prototype.new
     @prototype.prototype_images.build
