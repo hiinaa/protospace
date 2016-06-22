@@ -3,7 +3,10 @@
     .media
       .media-left
         = link_to '#' do
-          = image_tag @user.avatar, class: 'media-object', size: '64x64'
+          - if @user.avatar.blank?
+            = image_tag '/images/noimage.png', size: '64x64', class: 'media-object'
+          - else
+            = image_tag @user.avatar, class: 'media-object', size: '64x64'
       .media-body
         %h4#top-aligned-media.media-heading
           = @user.nickname
