@@ -1,10 +1,11 @@
 class PrototypesController < ApplicationController
+  before_action :set_prototype, except: [:index, :new, :create]
+
   def index
-    @prototypes = Prototype.order("created_at DESC")
+    @prototypes = Prototype.order(created_at: :DESC)
   end
 
   def show
-    @prototype = Prototype.find(params[:id])
   end
 
   def new
@@ -25,5 +26,9 @@ class PrototypesController < ApplicationController
   private
   def prototype_params
     params.require(:prototype).permit(:title, :catch_copy, :concept, prototype_images_attributes: [:id, :status, :image])
+  end
+
+  def set_prototype
+    @prototype = Prototype.find(params[:id])
   end
 end
