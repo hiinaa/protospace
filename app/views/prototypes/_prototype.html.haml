@@ -1,7 +1,10 @@
 .col-sm-4.col-md-3.proto-content
   .thumbnail
     = link_to prototype_path(prototype) do
-      = image_tag prototype.prototype_images.main.first.image
+      - if prototype.main_image.blank?
+        = image_tag '/images/noimage.png', size: '250x250'
+      - else
+        = image_tag prototype.main_image
     .caption
       %h3= prototype.title
       .proto-meta

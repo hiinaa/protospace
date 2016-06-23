@@ -4,7 +4,10 @@
       .media
         .media-left
           = link_to user_path do
-            = image_tag @prototype.user.avatar, class: 'media-object', size: '64x64'
+            - if @prototype.user.avatar.blank?
+              = image_tag '/images/noimage.png', size: '64x64', class: 'media-object'
+            - else
+              = image_tag @prototype.user.avatar, class: 'media-object', size: '64x64'
         .media-body
           %h4#top-aligned-media.media-heading
             = @prototype.title
@@ -19,7 +22,10 @@
         %span.num 20
   .row
     .col-md-9
-      = image_tag "#{@prototype.prototype_images.main.first.image}", class: 'img-responsive', size: '800x400'
+      - if @prototype.main_image.blank?
+        = image_tag '/images/noimage.png', size: '500x400'
+      - else
+        = image_tag @prototype.main_image, class: 'img-responsive', size: '800x400'
     .col-md-3
       %ul.proto-sub-list.list-group
         - @prototype.prototype_images.sub.each do |sub_image|
