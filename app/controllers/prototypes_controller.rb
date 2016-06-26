@@ -11,7 +11,6 @@ class PrototypesController < ApplicationController
   def new
     @prototype = Prototype.new
     @prototype.prototype_images.build
-    @tag_placeholder = [:WebDesign, :UI, :Application]
   end
 
   def create
