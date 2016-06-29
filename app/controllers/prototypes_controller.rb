@@ -1,4 +1,5 @@
 class PrototypesController < ApplicationController
+  before_action :move_to_index, except: :index
   before_action :set_prototype, except: [:index, :new, :create]
 
   def index
@@ -20,6 +21,7 @@ class PrototypesController < ApplicationController
     else
       redirect_to new_prototype_path, alert: 'Sorry, but something went wrong.'
     end
+  end
 
   def edit
   end
@@ -35,6 +37,10 @@ class PrototypesController < ApplicationController
   def destroy
     @prototype.destroy
     redirect_to root_path, notice: 'Deleted successfully!'
+  end
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
 
   private
