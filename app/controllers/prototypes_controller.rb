@@ -1,5 +1,4 @@
 class PrototypesController < ApplicationController
-  before_action :move_to_index, except: :index
   before_action :set_prototype, except: [:index, :new, :create]
 
   def index
@@ -36,10 +35,6 @@ class PrototypesController < ApplicationController
   def destroy
     @prototype.destroy
     redirect_to root_path, notice: 'Deleted successfully!'
-  end
-
-  def move_to_index
-    redirect_to root_path, unless user_signed_in?
   end
 
   private
