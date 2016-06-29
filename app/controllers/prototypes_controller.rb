@@ -20,6 +20,21 @@ class PrototypesController < ApplicationController
     else
       redirect_to new_prototype_path, alert: 'Sorry, but something went wrong.'
     end
+
+  def edit
+  end
+
+  def update
+    if @prototype.update(prototype_params)
+      redirect_to root_path, notice: 'Edited successfully!'
+    else
+      redirect_to edit_prototype_path, alert: 'Please fill in the blanks'
+    end
+  end
+
+  def destroy
+    @prototype.destroy
+    redirect_to root_path, notice: 'Deleted successfully!'
   end
 
   private
