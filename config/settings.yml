@@ -1,0 +1,11 @@
+defaults: &defaults
+  tag_placeholder: ['WebDesign', 'UI', 'Application']
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

@@ -1,0 +1,16 @@
+.col-sm-4.col-md-3.proto-content
+  .thumbnail
+    = link_to prototype_path(prototype) do
+      = image_tag prototype.main_image, size: '260x260'
+    .caption
+      %h3= prototype.title
+      .proto-meta
+        .proto-user
+          = link_to prototype.user.nickname, user_path(prototype.user)
+        .proto-posted
+          Apr 26
+      %ul.proto-tag-list.list-inline
+        %li
+          = link_to 'iPad', '#'
+        %li
+          = link_to 'wireframe', '#'
