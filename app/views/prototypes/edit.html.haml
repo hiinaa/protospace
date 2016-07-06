@@ -14,7 +14,17 @@
           %ul.proto-sub-list.list-group
             %li.list-group-item.col-md-4
               .image-upload
-                = f.fields_for :prototype_images, (@prototype.prototype_images.sub) do |images_form|
+                = f.fields_for :prototype_images, (@prototype.prototype_images.sub.first) do |images_form|
+                  = images_form.file_field :image, class: 'image-upload'
+                  = images_form.hidden_field :status, value: 'sub'
+            %li.list-group-item.col-md-4
+              .image-upload
+                = f.fields_for :prototype_images, (@prototype.prototype_images.sub.second) do |images_form|
+                  = images_form.file_field :image, class: 'image-upload'
+                  = images_form.hidden_field :status, value: 'sub'
+            %li.list-group-item.col-md-4
+              .image-upload
+                = f.fields_for :prototype_images, (@prototype.prototype_images.sub.third) do |images_form|
                   = images_form.file_field :image, class: 'image-upload'
                   = images_form.hidden_field :status, value: 'sub'
         .row.proto-description
