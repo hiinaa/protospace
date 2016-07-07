@@ -8,6 +8,9 @@
         .media-body
           %h4#top-aligned-media.media-heading
             = @prototype.title
+            - if user_signed_in? && @prototype.user_id == current_user.id
+              = link_to 'DELETE', prototype_path(@prototype), method: :delete, class: "btn btn-xs btn-primary navbar-btn"
+              = link_to 'EDIT', edit_prototype_path(@prototype), class: "btn btn-xs btn-primary navbar-btn"
           .proto-user
             = link_to "#{@prototype.user.nickname}", user_path(@prototype.user)
             %span.degree we-b inc. Designer
