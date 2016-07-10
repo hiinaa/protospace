@@ -8,4 +8,8 @@ class Prototype < ActiveRecord::Base
   def main_image
     prototype_images.main.first.image
   end
+
+  def liked_by?(user)
+    likes.find_by(user_id: user)
+  end
 end
