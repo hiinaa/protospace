@@ -9,7 +9,7 @@ class Prototype < ActiveRecord::Base
     prototype_images.main.first.image
   end
 
-  def liked_by?(user)
-    likes.find_by(user_id: user)
+  def liked_by?(user_id)
+    likes.find_by(user_id: user_id).present?
   end
 end
