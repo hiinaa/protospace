@@ -53,3 +53,4 @@ end
   gem 'rmagick'
   gem 'devise'
   gem 'config'
+  gem 'jquery-turbolinks'
