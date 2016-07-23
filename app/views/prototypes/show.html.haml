@@ -43,45 +43,18 @@
   .row.proto-comments
     %h4.col-md-12
       Comments
-      %span.num (10)
+      %span.num#comments-count= "(#{@comments.count})"
     .col-md-8
-      .media
-        .media-left
-          = link_to '#' do
-            = image_tag '/images/noimage.png', class: 'media-object', alt: '64x64', data: { holder:{ rendered: true }, src: 'holder.js/64x64' }, style: 'width: 64px; height: 64px;'
-        .media-body
-          %h4#top-aligned-media.media-heading
-            Top aligned media
-            = link_to '#top-aligned-media', class: 'anchorjs-link' do
-              %span.anchorjs-icon
-          %p Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          %p Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      .media
-        .media-left.media-middle
-          = link_to '#' do
-            = image_tag '/images/noimage.png', class: 'media-object', alt: '64x64', data: { holder: { rendered: true }, src: 'holder.js/64x64' }, style: 'width: 64px; height: 64px;'
-        .media-body
-          %h4#middle-aligned-media.media-heading
-            Middle aligned media
-            = link_to '#middle-aligned-media', class: 'anchorjs-link' do
-              %span.anchorjs-icon
-          %p Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          %p Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      .media
-        .media-left.media-bottom
-          = link_to '#' do
-            = image_tag '/images/noimage.png', class: 'media-object', alt: '64x64', data: { holder:{ rendered: true }, src: 'holder.js/64x64' }, style: 'width: 64px; height: 64px;'
-        .media-body
-          %h4#bottom-aligned-media.media-heading
-            Bottom aligned media
-            = link_to '#bottom-aligned-media', class: 'anchorjs-link' do
-              %span.anchorjs-icon
-          %p Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          %p Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      %form.form-inline{ role: 'form' }
-        %h4 Write a comment
-        .row
-          .form-group.col-md-10
-            %textarea.form-control{ placeholder: 'Your comments', rows: '3' }
-          .form-group.col-md-2
-            %button.btn.btn-primary Comment
+      #js-comments
+        = render partial: "comments/comment", collection: @comments
+      .form-inline
+        - if user_signed_in?
+          = form_for @comment, remote: true do |f|
+            %h4 Write a comment
+            .row
+              .form-group.col-md-10
+                = f.text_area :text, placeholder: 'Your comments', rows: '3', class: 'textform-control', id: 'comment_field', style: 'margin: 0px; width: 620px; height: 63px;'
+                = f.hidden_field :prototype_id, value: @prototype.id
+                = f.hidden_field :user_id, value: @prototype.user_id
+              .form-group.col-md-2
+                = f.submit 'Comment', class: 'button btn btn-primary'
