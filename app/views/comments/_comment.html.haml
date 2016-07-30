@@ -1,7 +1,7 @@
 .media
   .media-left
     = link_to user_path(comment.user_id) do
-      = image_tag @prototype.user.avatar, class: 'media-object', alt: '64x64', data: { holder:{ rendered: true }, src: 'holder.js/64x64' }, style: 'width: 64px; height: 64px;'
+      = image_tag @prototype.user.avatar, class: 'media-object', size: '64x64'
   .media-body
     #top-aligned-media.media-heading
       = @prototype.user.nickname
