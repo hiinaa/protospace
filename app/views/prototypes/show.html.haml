@@ -53,7 +53,7 @@
             %h4 Write a comment
             .row
               .form-group.col-md-10
-                = f.text_area :text, placeholder: 'Your comments', rows: '3', class: 'textform-control', id: 'comment_field', style: 'margin: 0px; width: 620px; height: 63px;'
+                = f.text_area :text, placeholder: 'Your comments', rows: '3', class: 'textform-control', id: 'comment_field'
                 = f.hidden_field :prototype_id, value: @prototype.id
                 = f.hidden_field :user_id, value: @prototype.user_id
               .form-group.col-md-2
