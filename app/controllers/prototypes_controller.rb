@@ -8,6 +8,8 @@ class PrototypesController < ApplicationController
 
   def show
     @like = @prototype.likes.find_by(user_id: current_user)
+    @comment = Comment.new
+    @comments = @prototype.comments.includes(:user)
   end
 
   def new
