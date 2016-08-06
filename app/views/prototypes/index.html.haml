@@ -1,24 +1,9 @@
-= render 'layouts/mainheader'
+= render 'layouts/main_header'
 .container.proto-list
   .row
     = render partial: "prototype", collection: @prototypes
-
 .text-center
   %ul.pagination
     %li.disabled
-      %a{ area: { label: 'Previous' }, href: '#' }
-        %span{ aria: { hidden: 'true' }} «
-    %li.active
-      %a{ href: '#' } 1
-    %li
-      %a{ href: '#' } 2
-    %li
-      %a{ href: '#' } 3
-    %li
-      %a{ href: '#' } 4
-    %li
-      %a{ href: '#' } 5
-    %li
-      %a{ area: { label: 'Next' }, href: '#' }
-        %span{ aria: { hidden: 'true' }} »
-Status API Training Shop Blog About
+      %span{ aria: { hidden: 'true' }}
+        = paginate(@prototypes)
