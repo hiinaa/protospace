@@ -3,7 +3,7 @@ class PrototypesController < ApplicationController
   before_action :set_prototype, except: [:index, :new, :create]
 
   def index
-    @prototypes = Prototype.order(created_at: :DESC).page(params[:page]).per(8)
+    @prototypes = Prototype.order(created_at: :DESC).page(params[:page])
   end
 
   def show
