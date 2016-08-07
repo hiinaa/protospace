@@ -54,3 +54,4 @@ end
   gem 'devise'
   gem 'config'
   gem 'jquery-turbolinks'
+  gem 'kaminari'

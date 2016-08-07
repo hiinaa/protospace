@@ -1,7 +1,5 @@
 = render 'layouts/main_header'
-.container.proto-list
-  .row
-    = render partial: "prototype", collection: @prototypes
+= render partial: "prototypes/prototype", collection: @prototypes
 .text-center
   %ul.pagination
     %li.disabled
