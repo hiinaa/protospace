@@ -11,6 +11,5 @@
           Apr 26
       %ul.proto-tag-list.list-inline
         %li
-          = link_to 'iPad', '#'
-        %li
-          = link_to 'wireframe', '#'
+        - prototype.tags.each do |tag|
+          = link_to tag.name, tag_path(tag), class: 'btn btn-default'
