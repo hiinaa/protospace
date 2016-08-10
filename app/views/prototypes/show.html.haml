@@ -37,9 +37,8 @@
       %h4 Tag List
       %ul.proto-tag-list.list-inline
         %li
-          = link_to 'iPad', '#', class: 'btn btn-default'
-        %li
-          = link_to 'wireframe', '#', class: 'btn btn-default'
+        - @prototype.tags.each do |tag|
+          = link_to tag.name, tag_path(tag), class: 'btn btn-default'
   .row.proto-comments
     %h4.col-md-12
       Comments

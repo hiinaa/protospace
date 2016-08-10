@@ -6,6 +6,8 @@ class Prototype < ActiveRecord::Base
   accepts_nested_attributes_for :prototype_images
   validates :title, :catch_copy, :concept, presence: true
   paginates_per 8
+  acts_as_taggable
+  acts_as_ordered_taggable_on :prototypes
 
   def main_image
     prototype_images.main.first.image

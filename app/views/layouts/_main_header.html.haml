@@ -7,12 +7,13 @@
     .row
       %ul.nav.nav-pills.col-lg-11
         - if current_page?(popular_index_path)
-          %li.active{ role: "presentation" }
-            = link_to "Popular PROTO", popular_index_path
-          %li{ role: "presentation" }
-            = link_to "Newest PROTO", root_path
+          %li.active{ role: 'presentation' }
+            = link_to 'Popular PROTO', popular_index_path
+          %li{ role: 'presentation' }
+            = link_to 'Newest PROTO', root_path
         - else
-          %li{role: "presentation"}
-            = link_to "Popular PROTO", popular_index_path
-          %li.active{role: "presentation"}
-            = link_to "Newest PROTO", root_path
+          %li{role: 'presentation'}
+            = link_to 'Popular PROTO', popular_index_path
+          %li.active{role: 'presentation'}
+            = link_to 'Newest PROTO', root_path
+      = link_to 'View Tags', tags_path, { type: 'button', class: 'btn btn-default col-lg-1' }
