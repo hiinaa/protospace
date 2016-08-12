@@ -1,7 +1,7 @@
 $(window).on('page:load', function(){
 
   jQuery('.js-preview-image').each(function() {
-    let self = $(this);
+    let preview = $(this);
     let input = $(this).find('input[type=file]');
     input.change(function() {
       let file = $(this).prop('files')[0];
@@ -10,7 +10,7 @@ $(window).on('page:load', function(){
         window.alert('error!')
       }
       fileReader.onload = function() {
-        self.css({
+        preview.css({
           'background-image': 'url(' + fileReader.result + ')'
         });
       };
