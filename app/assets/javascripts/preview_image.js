@@ -1,11 +1,11 @@
 $(window).on('page:load', function(){
 
-  $('.js-preview-image').each(function() {
-    const self = $(this);
-    const input = $(this).find('input[type=file]');
+  jQuery('.js-preview-image').each(function() {
+    let self = $(this);
+    let input = $(this).find('input[type=file]');
     input.change(function() {
-      var file = $(this).prop('files')[0];
-      const fileReader = new FileReader();
+      let file = $(this).prop('files')[0];
+      let fileReader = new FileReader();
       if (!this.files.length) {
         window.alert('error!')
       }
