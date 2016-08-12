@@ -6,10 +6,7 @@ $(window).on('page:load', function(){
     input.change(function() {
       let file = $(this).prop('files')[0];
       let fileReader = new FileReader();
-      if (!this.files.length) {
-        window.alert('error!')
-      }
-      if (!file.type.match('image.*')) {
+      if (!this.files.length || !file.type.match('image.*')) {
         window.alert('error!')
       }
       fileReader.onload = function() {
