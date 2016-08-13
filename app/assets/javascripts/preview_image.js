@@ -1,6 +1,6 @@
 $(window).on('page:load', function(){
 
-  jQuery('.js-preview-image').each(function() {
+  $('.js-preview-image').each(function() {
     let preview = $(this);
     let input = $(this).find('input[type=file]');
     input.change(function() {
