@@ -56,3 +56,4 @@ end
   gem 'jquery-turbolinks'
   gem 'kaminari'
   gem 'acts-as-taggable-on'
+  gem 'fog'
