@@ -55,6 +55,7 @@ group :test do
   gem "database_cleaner"
   gem "launchy"
   gem "poltergeist"
+  gem 'pry-rails'
 end
 
   gem 'haml-rails'
