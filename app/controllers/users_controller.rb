@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :acquire_user_id, only: [:edit, :show]
-  before_action :authenticate_user!, only: :update
+  before_action :acquire_user_id
+  before_action :authenticate_user!, except: :show
 
   def show
     @prototypes = @user.prototypes.order('created_at DESC')
